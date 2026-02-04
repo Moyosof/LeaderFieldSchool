@@ -1,0 +1,487 @@
+/* ============================================
+   RESPONSIVE STYLES
+   ============================================ */
+
+/* Large Devices (Desktops, less than 1200px) */
+@media (max-width: 1199.98px) {
+    .hero h1 {
+        font-size: 3rem;
+    }
+
+    .features-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .stats-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .footer-main {
+        grid-template-columns: 1fr 1fr;
+        gap: 2rem;
+    }
+
+    .team-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .gallery-grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    .admission-steps {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .step-card::after {
+        display: none;
+    }
+}
+
+/* Medium Devices (Tablets, less than 992px) */
+@media (max-width: 991.98px) {
+    h1 { font-size: 2.5rem; }
+    h2 { font-size: 2rem; }
+
+    .section {
+        padding: 4rem 0;
+    }
+
+    /* Navigation */
+    .nav-menu {
+        position: fixed;
+        top: 0;
+        right: -100%;
+        width: 300px;
+        height: 100vh;
+        background: white;
+        flex-direction: column;
+        padding: 5rem 2rem 2rem;
+        box-shadow: var(--shadow-xl);
+        transition: var(--transition-normal);
+        z-index: 1001;
+    }
+
+    .nav-menu.active {
+        right: 0;
+    }
+
+    .nav-link {
+        width: 100%;
+        padding: 1rem;
+        text-align: center;
+    }
+
+    .nav-cta {
+        margin-left: 0;
+        margin-top: 1rem;
+        width: 100%;
+    }
+
+    .nav-cta .btn {
+        width: 100%;
+    }
+
+    .mobile-menu-toggle {
+        display: flex;
+        z-index: 1002;
+    }
+
+    .mobile-menu-toggle.active span:nth-child(1) {
+        transform: rotate(45deg) translate(5px, 6px);
+    }
+
+    .mobile-menu-toggle.active span:nth-child(2) {
+        opacity: 0;
+    }
+
+    .mobile-menu-toggle.active span:nth-child(3) {
+        transform: rotate(-45deg) translate(5px, -6px);
+    }
+
+    .nav-overlay {
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background: rgba(0, 0, 0, 0.5);
+        opacity: 0;
+        visibility: hidden;
+        transition: var(--transition-normal);
+        z-index: 1000;
+    }
+
+    .nav-overlay.active {
+        opacity: 1;
+        visibility: visible;
+    }
+
+    /* Hero */
+    .hero .container {
+        grid-template-columns: 1fr;
+        text-align: center;
+    }
+
+    .hero h1 {
+        font-size: 2.5rem;
+    }
+
+    .hero-description {
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .hero-buttons {
+        justify-content: center;
+    }
+
+    .hero-stats {
+        justify-content: center;
+    }
+
+    .hero-image {
+        order: -1;
+        margin-bottom: 2rem;
+    }
+
+    .hero-image img {
+        height: 350px;
+    }
+
+    .hero-image-badge {
+        bottom: -10px;
+        left: 50%;
+        transform: translateX(-50%);
+    }
+
+    /* About Preview */
+    .about-preview .container {
+        grid-template-columns: 1fr;
+    }
+
+    .about-images {
+        order: -1;
+        margin-bottom: 2rem;
+    }
+
+    /* Programs */
+    .programs-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    /* News */
+    .news-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    /* Footer */
+    .footer-main {
+        grid-template-columns: 1fr;
+        text-align: center;
+    }
+
+    .footer-brand .logo {
+        justify-content: center;
+    }
+
+    .footer-social {
+        justify-content: center;
+    }
+
+    .footer-contact-item {
+        justify-content: center;
+    }
+
+    .footer-bottom {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    /* Contact */
+    .contact-section .container {
+        grid-template-columns: 1fr;
+    }
+
+    /* About Page */
+    .mission-vision {
+        grid-template-columns: 1fr;
+    }
+
+    .values-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    /* Curriculum */
+    .curriculum-grid {
+        grid-template-columns: 1fr;
+    }
+
+    /* Requirements */
+    .requirements-list {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* Small Devices (Landscape phones, less than 768px) */
+@media (max-width: 767.98px) {
+    html {
+        font-size: 15px;
+    }
+
+    h1 { font-size: 2rem; }
+    h2 { font-size: 1.75rem; }
+    h3 { font-size: 1.25rem; }
+
+    .section {
+        padding: 3rem 0;
+    }
+
+    .container {
+        padding: 0 1rem;
+    }
+
+    /* Hero */
+    .hero {
+        min-height: auto;
+        padding: 6rem 0 4rem;
+    }
+
+    .hero h1 {
+        font-size: 2rem;
+    }
+
+    .hero-stats {
+        flex-wrap: wrap;
+        gap: 1.5rem;
+    }
+
+    .stat-item {
+        flex: 1 1 40%;
+    }
+
+    .hero-image img {
+        height: 280px;
+    }
+
+    /* Features */
+    .features-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .feature-card {
+        padding: 1.5rem;
+    }
+
+    /* Programs */
+    .programs-grid {
+        grid-template-columns: 1fr;
+    }
+
+    /* Stats */
+    .stats-grid {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+    }
+
+    .stats-item .number {
+        font-size: 2.5rem;
+    }
+
+    /* News */
+    .news-grid {
+        grid-template-columns: 1fr;
+    }
+
+    /* Form */
+    .form-row {
+        grid-template-columns: 1fr;
+    }
+
+    /* Gallery */
+    .gallery-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 1rem;
+    }
+
+    /* Team */
+    .team-grid {
+        grid-template-columns: 1fr;
+    }
+
+    /* Values */
+    .values-grid {
+        grid-template-columns: 1fr;
+    }
+
+    /* Admission Steps */
+    .admission-steps {
+        grid-template-columns: 1fr;
+    }
+
+    /* Contact */
+    .contact-info-card,
+    .contact-form-card {
+        padding: 1.5rem;
+    }
+
+    /* CTA */
+    .cta-section {
+        padding: 3rem 0;
+    }
+
+    .cta-buttons {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    /* Page Header */
+    .page-header {
+        padding: 6rem 0 3rem;
+    }
+
+    /* Buttons */
+    .btn {
+        padding: 0.75rem 1.5rem;
+        font-size: 0.95rem;
+    }
+
+    /* Scroll Top */
+    .scroll-top {
+        width: 45px;
+        height: 45px;
+        bottom: 1.5rem;
+        right: 1.5rem;
+    }
+}
+
+/* Extra Small Devices (Portrait phones, less than 576px) */
+@media (max-width: 575.98px) {
+    html {
+        font-size: 14px;
+    }
+
+    .hero h1 {
+        font-size: 1.75rem;
+    }
+
+    .hero-badge {
+        font-size: 0.75rem;
+        padding: 0.4rem 0.8rem;
+    }
+
+    .hero-buttons .btn {
+        width: 100%;
+    }
+
+    .hero-image-badge {
+        padding: 1rem;
+    }
+
+    .hero-image-badge i {
+        font-size: 1.5rem;
+    }
+
+    /* About Images */
+    .about-img-secondary {
+        width: 150px;
+        right: 0;
+        bottom: -20px;
+    }
+
+    .about-img-secondary img {
+        height: 150px;
+    }
+
+    .experience-badge {
+        padding: 1rem;
+        top: 10px;
+        left: 10px;
+    }
+
+    .experience-badge .years {
+        font-size: 2rem;
+    }
+
+    /* Testimonials */
+    .testimonial-card {
+        padding: 1.5rem;
+    }
+
+    .testimonial-quote {
+        font-size: 1rem;
+    }
+
+    .testimonial-author {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    /* Gallery */
+    .gallery-filters {
+        gap: 0.5rem;
+    }
+
+    .filter-btn {
+        padding: 0.4rem 1rem;
+        font-size: 0.85rem;
+    }
+
+    /* Footer */
+    .footer {
+        padding-top: 3rem;
+    }
+
+    .footer-bottom-links {
+        flex-direction: column;
+        gap: 0.5rem;
+    }
+}
+
+/* Prefers Reduced Motion */
+@media (prefers-reduced-motion: reduce) {
+    *,
+    *::before,
+    *::after {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+    }
+
+    html {
+        scroll-behavior: auto;
+    }
+}
+
+/* Print Styles */
+@media print {
+    .header,
+    .footer,
+    .scroll-top,
+    .hero-shapes,
+    .nav-menu,
+    .mobile-menu-toggle {
+        display: none !important;
+    }
+
+    body {
+        font-size: 12pt;
+        line-height: 1.5;
+        color: black;
+        background: white;
+    }
+
+    .section {
+        padding: 1rem 0;
+    }
+
+    a {
+        text-decoration: underline;
+    }
+
+    .btn {
+        border: 1px solid black;
+        background: none;
+        color: black;
+    }
+}
