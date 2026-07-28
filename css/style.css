@@ -1417,6 +1417,28 @@ textarea.form-control {
     transform: scale(1.05);
 }
 
+.team-avatar {
+    height: 200px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(135deg, var(--primary-color), var(--primary-light));
+}
+
+.team-avatar span {
+    width: 90px;
+    height: 90px;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.15);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: 'Poppins', sans-serif;
+    font-size: 1.75rem;
+    font-weight: 700;
+    color: white;
+}
+
 .team-info {
     padding: 1.5rem;
 }
