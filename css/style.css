@@ -581,6 +581,19 @@ input, textarea, select {
     align-items: center;
 }
 
+/* Reusable two-column grid (collapses to one column on tablets - see responsive.css) */
+.grid-2-col {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+/* Two-card centered team grid (collapses to one column on phones - see responsive.css) */
+.team-grid-two {
+    grid-template-columns: repeat(2, 1fr);
+    max-width: 640px;
+    margin: 0 auto;
+}
+
 .about-images {
     position: relative;
 }

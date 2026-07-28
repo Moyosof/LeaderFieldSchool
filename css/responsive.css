@@ -208,6 +208,10 @@
         grid-template-columns: 1fr;
     }
 
+    .grid-2-col {
+        grid-template-columns: 1fr;
+    }
+
     .values-grid {
         grid-template-columns: repeat(2, 1fr);
     }
@@ -307,6 +311,11 @@
     /* Team */
     .team-grid {
         grid-template-columns: 1fr;
+    }
+
+    .team-grid-two {
+        grid-template-columns: 1fr;
+        max-width: 320px;
     }
 
     /* Values */
